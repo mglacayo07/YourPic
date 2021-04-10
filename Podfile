@@ -7,6 +7,6 @@ target 'YourPic' do
 
   # Pods for YourPic
   pod 'Firebase/Analytics'
-
+  pod 'Firebase/Auth'
 
 end
