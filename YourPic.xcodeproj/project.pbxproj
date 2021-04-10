@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		71838DC126220E1800BC90B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71838DC026220E1800BC90B0 /* Assets.xcassets */; };
 		71838DC426220E1800BC90B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71838DC226220E1800BC90B0 /* LaunchScreen.storyboard */; };
 		71838DCE2622101A00BC90B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71838DCD2622101A00BC90B0 /* GoogleService-Info.plist */; };
+		71838DEC2622187E00BC90B0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838DEB2622187E00BC90B0 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		71838DC326220E1800BC90B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71838DC526220E1800BC90B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71838DCD2622101A00BC90B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		71838DEB2622187E00BC90B0 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,6 @@
 				2950DF490CB8311BCD7355A8 /* Pods-YourPic.debug.xcconfig */,
 				6289444D37A725568C551435 /* Pods-YourPic.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,6 +84,7 @@
 				71838DC226220E1800BC90B0 /* LaunchScreen.storyboard */,
 				71838DC526220E1800BC90B0 /* Info.plist */,
 				71838DCD2622101A00BC90B0 /* GoogleService-Info.plist */,
+				71838DEB2622187E00BC90B0 /* Utility.swift */,
 			);
 			path = YourPic;
 			sourceTree = "<group>";
@@ -210,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71838DEC2622187E00BC90B0 /* Utility.swift in Sources */,
 				71838DBC26220E1700BC90B0 /* ViewController.swift in Sources */,
 				71838DB826220E1700BC90B0 /* AppDelegate.swift in Sources */,
 				71838DBA26220E1700BC90B0 /* SceneDelegate.swift in Sources */,

@@ -44,12 +44,18 @@
                                 <state key="normal" title="Crear cuenta">
                                     <color key="titleColor" red="0.83202153440000004" green="0.055355854330000002" blue="0.45609056949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K0V-eT-Qsw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clW-nX-w96">
                                 <rect key="frame" x="145.5" y="501" width="123" height="29"/>
                                 <state key="normal" title="Iniciar Sesión" backgroundImage="boton gris">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wdi-0T-XKF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -74,6 +80,10 @@
                             <constraint firstItem="ozD-8V-tgL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="tRX-qV-2mX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="pYF-5w-KLh" id="oDk-d3-3Ps"/>
+                        <outlet property="password" destination="ozD-8V-tgL" id="CGS-0N-9Hm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
