@@ -16,6 +16,7 @@
 		71838DC426220E1800BC90B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71838DC226220E1800BC90B0 /* LaunchScreen.storyboard */; };
 		71838DCE2622101A00BC90B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71838DCD2622101A00BC90B0 /* GoogleService-Info.plist */; };
 		71838DEC2622187E00BC90B0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838DEB2622187E00BC90B0 /* Utility.swift */; };
+		71838DEF26221E7300BC90B0 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		71838DC526220E1800BC90B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71838DCD2622101A00BC90B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71838DEB2622187E00BC90B0 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				71838DB726220E1700BC90B0 /* AppDelegate.swift */,
 				71838DB926220E1700BC90B0 /* SceneDelegate.swift */,
 				71838DBB26220E1700BC90B0 /* ViewController.swift */,
+				71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */,
 				71838DBD26220E1700BC90B0 /* Main.storyboard */,
 				71838DC026220E1800BC90B0 /* Assets.xcassets */,
 				71838DC226220E1800BC90B0 /* LaunchScreen.storyboard */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71838DEF26221E7300BC90B0 /* CreateAccountViewController.swift in Sources */,
 				71838DEC2622187E00BC90B0 /* Utility.swift in Sources */,
 				71838DBC26220E1700BC90B0 /* ViewController.swift in Sources */,
 				71838DB826220E1700BC90B0 /* AppDelegate.swift in Sources */,
