@@ -18,11 +18,6 @@ class ViewController: Utility {
         // Do any additional setup after loading the view.
     }
 
-
-    @IBAction func createAccount(_ sender: Any) {
-       
-    }
-    
     @IBAction func login(_ sender: Any) {
         print("Entre a login")
         let mail = email.text!
