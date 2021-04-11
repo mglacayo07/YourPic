@@ -101,7 +101,7 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
                 print("Error \(error)")
             }else{
                 print("Image metadata: \(String(describing: metadata))")
-                //self.collectionView.reloadData()
+                self.collectionView.reloadData()
             }
         }
         
@@ -115,8 +115,10 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
              if let error=error{
                  print("Error \(error)")
              }else{
+                
                  self.idImage = result.items.count
-                 for item in result.items {
+                 for item in result.items {                   
+                    
                      self.images.append(self.storage.reference(forURL: "\(item)"))
                      self.collectionView.reloadData()
                  }

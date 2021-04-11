@@ -16,6 +16,7 @@ class ZoomViewController: UIViewController {
     let storage = Storage.storage()
     var name: String = ""
     var ref: [StorageReference] = []
+    var started: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,7 @@ class ZoomViewController: UIViewController {
             } else {
                 print("URL:  \(String(describing: url!))")
                 self.starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+                self.started = true
             }
         }
     }
@@ -65,14 +67,57 @@ class ZoomViewController: UIViewController {
                         print("Error \(error)")
                     }else{
                         print("Image metadata: \(String(describing: metadata))")
+                        self.starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+                        self.started = true
                         
                     }
                 }
             } else {
                 print("URL:  \(String(describing: url!))")
+                self.started = false
                 self.starButton.setImage(UIImage(systemName: "star"), for: .normal)
+                self.deleteImage()
             }
         }        
     }
     
+    @IBAction func deleteButton(_ sender: Any) {
+        let alertController = UIAlertController(title: "Alerta", message: "¿Seguro que desea eliminar la imagen?", preferredStyle: .alert)
+        
+        let logout = UIAlertAction(title: "Si", style: UIAlertAction.Style.default) { (action) in
+            self.deleteImage()
+        }
+        
+        let cancel = UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel) { (action) in
+        }
+        
+        alertController.addAction(logout)
+        alertController.addAction(cancel)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func deleteImage(){
+        print("DEBERIA BORRAR")
+        
+        let storageRef = storage.reference()
+        
+        if(started){
+            let startedDownloadUrlRef = storageRef.child("yourpic/stars/\(Auth.auth().currentUser!.uid)/\(name)")
+            startedDownloadUrlRef.delete { error in
+              if let error = error {
+                print("Error startedDownloadUrlRef \(error)")
+              }
+            }
+        }
+        
+        let imageDownloadUrlRef = storageRef.child("yourpic/feed/\(Auth.auth().currentUser!.uid)/\(name)")
+        imageDownloadUrlRef.delete { error in
+          if let error = error {
+            print("Error imageDownloadUrlRef \(error)")
+          }
+        }
+        
+        _ = navigationController?.popViewController(animated: true)
+    }
 }

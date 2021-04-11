@@ -107,7 +107,7 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vBL-Ue-aHQ">
                                 <rect key="frame" x="10" y="98" width="394" height="754"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rmi-3F-Zso">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -166,7 +166,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <toolbar autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="XF1-sT-yzO">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cYO-QB-qj9"/>
                                     <barButtonItem title="Item" image="star.circle.fill" catalog="system" id="uZq-If-RXW">
@@ -192,8 +192,8 @@
                                 <color key="tintColor" red="0.83202153440000004" green="0.055355854330000002" blue="0.45609056949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="chv-lq-9lP">
-                                <rect key="frame" x="10" y="98" width="394" height="710"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="10" y="98" width="394" height="705"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QS7-uU-jRr">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -520,7 +520,14 @@
                             <constraint firstItem="ihf-o4-BWT" firstAttribute="trailing" secondItem="ReM-ad-klh" secondAttribute="trailing" id="swv-MA-PvL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4ob-xN-0FG"/>
+                    <navigationItem key="navigationItem" id="4ob-xN-0FG">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="3sa-bM-nEp">
+                            <color key="tintColor" red="0.83202153440000004" green="0.055355854330000002" blue="0.45609056949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="deleteButton:" destination="WQv-l4-01n" id="HWG-r4-y3M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="starButton" destination="PeW-Pj-UiS" id="BbI-TJ-jK9"/>
                         <outlet property="zoomImage" destination="Arh-xv-R9k" id="mls-LP-6za"/>
@@ -538,6 +545,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Smk-yi-rwR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.83202153440000004" green="0.055355854330000002" blue="0.45609056949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -565,6 +573,7 @@
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
