@@ -8,5 +8,8 @@ target 'YourPic' do
   # Pods for YourPic
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
+  pod 'Firebase/RemoteConfig'
 
 end

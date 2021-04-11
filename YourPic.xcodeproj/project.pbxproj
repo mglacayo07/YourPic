@@ -18,6 +18,7 @@
 		71838DEC2622187E00BC90B0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838DEB2622187E00BC90B0 /* Utility.swift */; };
 		71838DEF26221E7300BC90B0 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */; };
 		71838DF626222F3D00BC90B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838DF526222F3D00BC90B0 /* MainViewController.swift */; };
+		71838E1E2622984900BC90B0 /* MainViewController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838E1D2622984900BC90B0 /* MainViewController+ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		71838DEB2622187E00BC90B0 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		71838DF526222F3D00BC90B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		71838E1D2622984900BC90B0 /* MainViewController+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ImagePicker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,7 @@
 			children = (
 				71838DB726220E1700BC90B0 /* AppDelegate.swift */,
 				71838DB926220E1700BC90B0 /* SceneDelegate.swift */,
-				71838DF526222F3D00BC90B0 /* MainViewController.swift */,
+				71838E312622993000BC90B0 /* MainViewController */,
 				71838DBB26220E1700BC90B0 /* ViewController.swift */,
 				71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */,
 				71838DBD26220E1700BC90B0 /* Main.storyboard */,
@@ -93,6 +95,15 @@
 				71838DEB2622187E00BC90B0 /* Utility.swift */,
 			);
 			path = YourPic;
+			sourceTree = "<group>";
+		};
+		71838E312622993000BC90B0 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71838DF526222F3D00BC90B0 /* MainViewController.swift */,
+				71838E1D2622984900BC90B0 /* MainViewController+ImagePicker.swift */,
+			);
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 		C4961E5E86DD4FCB58DC5283 /* Frameworks */ = {
@@ -222,6 +233,7 @@
 				71838DEC2622187E00BC90B0 /* Utility.swift in Sources */,
 				71838DBC26220E1700BC90B0 /* ViewController.swift in Sources */,
 				71838DF626222F3D00BC90B0 /* MainViewController.swift in Sources */,
+				71838E1E2622984900BC90B0 /* MainViewController+ImagePicker.swift in Sources */,
 				71838DB826220E1700BC90B0 /* AppDelegate.swift in Sources */,
 				71838DBA26220E1700BC90B0 /* SceneDelegate.swift in Sources */,
 			);

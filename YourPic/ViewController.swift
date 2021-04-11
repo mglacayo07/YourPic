@@ -48,7 +48,7 @@ class ViewController: Utility {
     @IBAction func createAccount(_ sender: Any) {
         //let createAccountView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "createAccountView") as? CreateAccountViewController
         //present(createAccountView!, animated: true, completion: nil)
-        self.performSegue(withIdentifier: "mainIdentifier", sender: self)
+        self.performSegue(withIdentifier: "createIdentifier", sender: self)
     }
 }
 

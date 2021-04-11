@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseRemoteConfig
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -29,6 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        setupReportConfig()
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
@@ -46,7 +48,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
+    
+    func setupReportConfig(){
+        let remoteConfigDefaultValues = ["isButtonEnabled":"true"] as NSObject
+        
+        RemoteConfig.remoteConfig().setDefaults(remoteConfigDefaultValues as! [String:NSObject])
+        
+        let debugSettings = RemoteConfigSettings()
+        debugSettings.minimumFetchInterval = 0
+        RemoteConfig.remoteConfig().configSettings = debugSettings
+        
+        RemoteConfig.remoteConfig().fetch { (status, error) in
+            if status == .success{
+                RemoteConfig.remoteConfig().activate { (bool, error) in
+                    
+                }
+            }
+        }
+    }
 
 }
 
