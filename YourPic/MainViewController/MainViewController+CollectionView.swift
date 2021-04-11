@@ -24,11 +24,16 @@ extension MainViewController: UICollectionViewDataSource{
         ref.downloadURL { (url, error) in
             if let error=error{
                 print("Error \(error)")
-            }else{
-                print("URL \(url)")
             }
         }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Pique \(indexPath) \(images[indexPath.item])")
+        self.zoomRef.removeAll()
+        self.zoomRef.append(images[indexPath.item])
+        self.performSegue(withIdentifier: "zoomIdentifier", sender: self)
     }
     
 }

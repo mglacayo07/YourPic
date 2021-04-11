@@ -18,6 +18,7 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
     var idImage: Int = 0
     
     var pageIndex: Int = 1
+    var zoomRef: [StorageReference] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +88,7 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
                 print("Error \(error)")
             }else{
                 print("Image metadata: \(String(describing: metadata))")
-                self.collectionView.reloadData()
+                //self.collectionView.reloadData()
             }
         }
         
@@ -109,5 +110,11 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
                  
              }
          }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let zoomView = segue.destination as! ZoomViewController
+        zoomView.ref = zoomRef
+        
     }
 }

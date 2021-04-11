@@ -24,6 +24,7 @@
 		71838EB42622B58A00BC90B0 /* imageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838EB22622B58A00BC90B0 /* imageCollectionViewCell.swift */; };
 		71838EB52622B58A00BC90B0 /* imageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71838EB32622B58A00BC90B0 /* imageCollectionViewCell.xib */; };
 		71838EBD2622BAD300BC90B0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838EBC2622BAD300BC90B0 /* Model.swift */; };
+		71838EC12622D6DD00BC90B0 /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838EC02622D6DD00BC90B0 /* ZoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		71838EB22622B58A00BC90B0 /* imageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCollectionViewCell.swift; sourceTree = "<group>"; };
 		71838EB32622B58A00BC90B0 /* imageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = imageCollectionViewCell.xib; sourceTree = "<group>"; };
 		71838EBC2622BAD300BC90B0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		71838EC02622D6DD00BC90B0 /* ZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				71838DBB26220E1700BC90B0 /* ViewController.swift */,
 				71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */,
 				71838E572622A51000BC90B0 /* ProfileViewController.swift */,
+				71838EC02622D6DD00BC90B0 /* ZoomViewController.swift */,
 				71838DBD26220E1700BC90B0 /* Main.storyboard */,
 				71838DEB2622187E00BC90B0 /* Utility.swift */,
 				71838EB22622B58A00BC90B0 /* imageCollectionViewCell.swift */,
@@ -252,6 +255,7 @@
 				71838EB02622B51500BC90B0 /* MainViewController+CollectionView.swift in Sources */,
 				71838DF626222F3D00BC90B0 /* MainViewController.swift in Sources */,
 				71838E1E2622984900BC90B0 /* MainViewController+ImagePicker.swift in Sources */,
+				71838EC12622D6DD00BC90B0 /* ZoomViewController.swift in Sources */,
 				71838DB826220E1700BC90B0 /* AppDelegate.swift in Sources */,
 				71838EBD2622BAD300BC90B0 /* Model.swift in Sources */,
 				71838E582622A51000BC90B0 /* ProfileViewController.swift in Sources */,
