@@ -23,20 +23,16 @@ class ViewController: Utility {
         super.viewDidAppear(animated)
         
         if Auth.auth().currentUser != nil{
-            self.openMain()
+            self.performSegue(withIdentifier: "mainIdentifier", sender: self)
         }
     }
     
     //IBAction functions
     @IBAction func login(_ sender: Any) {
-        let mail = email.text!
-        let pwd = password.text!
-        if(mail.count==0){
-            alert(title: "Error de credenciales", message: "Correo Invalido")
-            return
-        }
-        if(pwd.count==0){
-            alert(title: "Error de credenciales", message: "Contraseña Invalida")
+
+        guard let mail = email.text, mail != "", let pwd = password.text, pwd != "" else{
+            //self.removeSpinner()
+            alert(title: "Error de credenciales", message: "Datos Invalidos")
             return
         }
         
@@ -44,9 +40,7 @@ class ViewController: Utility {
             if let error = error{
                 self.alert(title: "Error al autenticar", message: "Error en las credenciales. \"\(error.localizedDescription)\"")
             }else{
-                //self.alert(title: "Inicio de Sesión", message: "Bienvenido \(result?.user.email)")
-                print("LOGIN TRUE")
-                self.openMain()
+                self.performSegue(withIdentifier: "mainIdentifier", sender: self)
             }
         }
     }
@@ -54,12 +48,6 @@ class ViewController: Utility {
     @IBAction func createAccount(_ sender: Any) {
         let createAccountView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "createAccountView") as? CreateAccountViewController
         present(createAccountView!, animated: true, completion: nil)
-    }
-    
-    //My functions
-    func openMain(){
-        let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "mainView") as? MainViewController
-        present(mainView!, animated: true)
     }
 }
 

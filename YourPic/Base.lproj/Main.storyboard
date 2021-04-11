@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qG6-6s-0i8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -80,13 +80,12 @@
                             <constraint firstItem="ozD-8V-tgL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="tRX-qV-2mX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HAG-5J-goK">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="4ff-1D-7hm"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="HAG-5J-goK"/>
                     <connections>
                         <outlet property="email" destination="pYF-5w-KLh" id="oDk-d3-3Ps"/>
                         <outlet property="password" destination="ozD-8V-tgL" id="CGS-0N-9Hm"/>
                         <segue destination="sP7-Vq-QTC" kind="show" identifier="" id="zn1-B6-gVd"/>
+                        <segue destination="pF3-pK-lKM" kind="show" identifier="mainIdentifier" id="Bfq-YM-Qhb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -119,10 +118,11 @@
                             <constraint firstItem="pFW-Jz-zQJ" firstAttribute="trailing" secondItem="iVF-sw-gtT" secondAttribute="trailing" id="y4J-w3-R48"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9hU-sq-w5o"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUw-wQ-qgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1780" y="76"/>
+            <point key="canvasLocation" x="1838" y="76"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="Hoh-d4-DOZ">

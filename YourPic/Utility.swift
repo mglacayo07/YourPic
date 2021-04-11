@@ -15,4 +15,13 @@ class Utility: UIViewController{
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    func alertDismiss(title:String,message:String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ok", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
