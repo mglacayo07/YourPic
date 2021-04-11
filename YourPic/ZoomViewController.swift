@@ -11,7 +11,9 @@ import Firebase
 class ZoomViewController: UIViewController {
 
     @IBOutlet weak var zoomImage: UIImageView!
+    
     @IBOutlet weak var starButton: UIButton!
+    
     
     let storage = Storage.storage()
     var name: String = ""
@@ -41,6 +43,7 @@ class ZoomViewController: UIViewController {
             } else {
                 print("URL:  \(String(describing: url!))")
                 self.starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+                
                 self.started = true
             }
         }
@@ -76,7 +79,7 @@ class ZoomViewController: UIViewController {
                 print("URL:  \(String(describing: url!))")
                 self.started = false
                 self.starButton.setImage(UIImage(systemName: "star"), for: .normal)
-                self.deleteImage()
+                
             }
         }        
     }

@@ -23,9 +23,13 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="RM9-sd-ngM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7Dr-Zn-4ni"/>
                 <constraint firstAttribute="bottom" secondItem="RM9-sd-ngM" secondAttribute="bottom" id="9JK-El-RTC"/>
                 <constraint firstItem="RM9-sd-ngM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CJr-5T-ya8"/>
+                <constraint firstAttribute="bottom" secondItem="RM9-sd-ngM" secondAttribute="bottom" id="IUl-gP-aKa"/>
+                <constraint firstItem="RM9-sd-ngM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Y3e-Jd-v0p"/>
                 <constraint firstItem="RM9-sd-ngM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iHe-PQ-wNh"/>
+                <constraint firstAttribute="trailing" secondItem="RM9-sd-ngM" secondAttribute="trailing" id="tUh-Zi-b9U"/>
                 <constraint firstAttribute="trailing" secondItem="RM9-sd-ngM" secondAttribute="trailing" id="yzf-wn-RJh"/>
             </constraints>
             <size key="customSize" width="150" height="150"/>

@@ -20,13 +20,28 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
     var pageIndex: Int = 1
     var zoomRef: [StorageReference] = []
     
+    var screenSize: CGRect!
+    var screenWidth: CGFloat!
+    var screenHeight: CGFloat!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         let nib = UINib.init(nibName: "imageCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "imageCellIdentifier")
-
+        
+        screenSize = UIScreen.main.bounds
+        screenWidth = screenSize.width
+        screenHeight = screenSize.height
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 10, right: 0)
+        layout.itemSize = CGSize(width: screenWidth/3, height: screenWidth/3)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView!.collectionViewLayout = layout
+        
         downloadImages()
     }
     
@@ -115,10 +130,9 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
              if let error=error{
                  print("Error \(error)")
              }else{
-                
                  self.idImage = result.items.count
                  for item in result.items {                   
-                    
+                     print("item: \(item)")
                      self.images.append(self.storage.reference(forURL: "\(item)"))
                      self.collectionView.reloadData()
                  }

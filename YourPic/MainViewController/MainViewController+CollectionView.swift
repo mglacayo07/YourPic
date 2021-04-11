@@ -33,6 +33,7 @@ extension MainViewController: UICollectionViewDataSource{
         print("Pique \(indexPath) \(images[indexPath.item])")
         self.zoomRef.removeAll()
         self.zoomRef.append(images[indexPath.item])
+        print()
         self.performSegue(withIdentifier: "zoomIdentifier", sender: self)
     }
     
@@ -45,6 +46,11 @@ extension MainViewController: UICollectionViewDelegate{
 extension MainViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
         return CGSize(width: 100, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
 }
