@@ -13,11 +13,21 @@ class ViewController: Utility {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    //override functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if Auth.auth().currentUser != nil{
+            self.openMain()
+        }
+    }
+    
+    //IBAction functions
     @IBAction func login(_ sender: Any) {
         let mail = email.text!
         let pwd = password.text!
@@ -33,12 +43,23 @@ class ViewController: Utility {
         Auth.auth().signIn(withEmail: mail, password: pwd) { (result, error) in
             if let error = error{
                 self.alert(title: "Error al autenticar", message: "Error en las credenciales. \"\(error.localizedDescription)\"")
-                print("Error \(error)")
             }else{
-                self.alert(title: "Inicio de Sesión", message: "Bienvenido \(result!.user.email)")
-                print("Usuario autenticado: \(result!.user.uid)")
+                //self.alert(title: "Inicio de Sesión", message: "Bienvenido \(result?.user.email)")
+                print("LOGIN TRUE")
+                self.openMain()
             }
         }
+    }
+    
+    @IBAction func createAccount(_ sender: Any) {
+        let createAccountView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "createAccountView") as? CreateAccountViewController
+        present(createAccountView!, animated: true, completion: nil)
+    }
+    
+    //My functions
+    func openMain(){
+        let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "mainView") as? MainViewController
+        present(mainView!, animated: true)
     }
 }
 
