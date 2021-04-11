@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseRemoteConfig
 
-class MainViewController: UIViewController, UINavigationControllerDelegate {
+class MainViewController: Utility, UINavigationControllerDelegate {
        
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -19,6 +19,7 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
     
     var pageIndex: Int = 1
     var zoomRef: [StorageReference] = []
+    var indexP: [Int] = []
     
     var screenSize: CGRect!
     var screenWidth: CGFloat!
@@ -43,6 +44,12 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
         collectionView!.collectionViewLayout = layout
         
         downloadImages()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let zoomView = segue.destination as? ZoomViewController
+        zoomView?.ref = zoomRef
+        zoomView?.main = self
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -100,8 +107,9 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
         self.view.addSubview(activityIndicator)
         
         let storageRef = storage.reference()
+        let name = randomString(length: 10)
         
-        let imageRef = storageRef.child("yourpic").child("feed").child("\(Auth.auth().currentUser!.uid)").child("\(idImage).jpeg")
+        let imageRef = storageRef.child("yourpic").child("feed").child("\(Auth.auth().currentUser!.uid)").child("\(name)\(idImage).jpeg")
         idImage+=1
         print("idImage: \(idImage)")
         
@@ -116,6 +124,7 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
                 print("Error \(error)")
             }else{
                 print("Image metadata: \(String(describing: metadata))")
+                self.images.append(self.storage.reference(forURL: "\(imageRef)"))
                 self.collectionView.reloadData()
             }
         }
@@ -141,9 +150,5 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
          }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let zoomView = segue.destination as? ZoomViewController
-        zoomView?.ref = zoomRef
-        
-    }
+
 }

@@ -527,6 +527,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteButton" destination="3sa-bM-nEp" id="pP3-dB-tOh"/>
                         <outlet property="starButton" destination="JVI-Lm-Hg8" id="Z5V-f2-bGo"/>
                         <outlet property="zoomImage" destination="Arh-xv-R9k" id="mls-LP-6za"/>
                     </connections>

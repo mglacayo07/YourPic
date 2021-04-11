@@ -33,7 +33,9 @@ extension MainViewController: UICollectionViewDataSource{
         print("Pique \(indexPath) \(images[indexPath.item])")
         self.zoomRef.removeAll()
         self.zoomRef.append(images[indexPath.item])
-        print()
+        self.indexP.removeAll()
+        self.indexP.append(indexPath.row)
+        
         self.performSegue(withIdentifier: "zoomIdentifier", sender: self)
     }
     

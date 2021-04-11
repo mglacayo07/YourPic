@@ -16,6 +16,7 @@ class FavoritesViewController: UIViewController {
     let storage = Storage.storage()
     var images: [StorageReference] = []
     var zoomRef: [StorageReference] = []
+    var indexP: [Int] = []
     
     var screenSize: CGRect!
     var screenWidth: CGFloat!
@@ -38,14 +39,13 @@ class FavoritesViewController: UIViewController {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         collectionView!.collectionViewLayout = layout
-
+        
         downloadImages()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let zoomView = segue.destination as? ZoomViewController
         zoomView?.ref = zoomRef
-        
     }
     
     func downloadImages(){

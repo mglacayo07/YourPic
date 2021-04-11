@@ -11,9 +11,10 @@ import Firebase
 class ZoomViewController: UIViewController {
 
     @IBOutlet weak var zoomImage: UIImageView!
-    
     @IBOutlet weak var starButton: UIButton!
+    @IBOutlet weak var deleteButton: UIBarButtonItem!
     
+    var main: MainViewController?
     
     let storage = Storage.storage()
     var name: String = ""
@@ -22,6 +23,10 @@ class ZoomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(self.main?.indexP == nil){
+            print("Vengo de favorite")
+            deleteButton.isEnabled = false
+       }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +77,6 @@ class ZoomViewController: UIViewController {
                         print("Image metadata: \(String(describing: metadata))")
                         self.starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
                         self.started = true
-                        
                     }
                 }
             } else {
@@ -118,6 +122,13 @@ class ZoomViewController: UIViewController {
         imageDownloadUrlRef.delete { error in
           if let error = error {
             print("Error imageDownloadUrlRef \(error)")
+          }else{
+            if(self.main?.idImage != nil){
+                print("Vengo de main")
+                self.main?.images.remove(at: (self.main?.indexP[0])!)
+                self.main?.collectionView.reloadData()
+            }
+            
           }
         }
         
