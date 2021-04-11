@@ -19,6 +19,11 @@
 		71838DEF26221E7300BC90B0 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */; };
 		71838DF626222F3D00BC90B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838DF526222F3D00BC90B0 /* MainViewController.swift */; };
 		71838E1E2622984900BC90B0 /* MainViewController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838E1D2622984900BC90B0 /* MainViewController+ImagePicker.swift */; };
+		71838E582622A51000BC90B0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838E572622A51000BC90B0 /* ProfileViewController.swift */; };
+		71838EB02622B51500BC90B0 /* MainViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838EAF2622B51500BC90B0 /* MainViewController+CollectionView.swift */; };
+		71838EB42622B58A00BC90B0 /* imageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838EB22622B58A00BC90B0 /* imageCollectionViewCell.swift */; };
+		71838EB52622B58A00BC90B0 /* imageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71838EB32622B58A00BC90B0 /* imageCollectionViewCell.xib */; };
+		71838EBD2622BAD300BC90B0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838EBC2622BAD300BC90B0 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		71838DF526222F3D00BC90B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		71838E1D2622984900BC90B0 /* MainViewController+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ImagePicker.swift"; sourceTree = "<group>"; };
+		71838E572622A51000BC90B0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		71838EAF2622B51500BC90B0 /* MainViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		71838EB22622B58A00BC90B0 /* imageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCollectionViewCell.swift; sourceTree = "<group>"; };
+		71838EB32622B58A00BC90B0 /* imageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = imageCollectionViewCell.xib; sourceTree = "<group>"; };
+		71838EBC2622BAD300BC90B0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,15 +94,19 @@
 			children = (
 				71838DB726220E1700BC90B0 /* AppDelegate.swift */,
 				71838DB926220E1700BC90B0 /* SceneDelegate.swift */,
+				71838EBC2622BAD300BC90B0 /* Model.swift */,
 				71838E312622993000BC90B0 /* MainViewController */,
 				71838DBB26220E1700BC90B0 /* ViewController.swift */,
 				71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */,
+				71838E572622A51000BC90B0 /* ProfileViewController.swift */,
 				71838DBD26220E1700BC90B0 /* Main.storyboard */,
+				71838DEB2622187E00BC90B0 /* Utility.swift */,
+				71838EB22622B58A00BC90B0 /* imageCollectionViewCell.swift */,
+				71838EB32622B58A00BC90B0 /* imageCollectionViewCell.xib */,
 				71838DC026220E1800BC90B0 /* Assets.xcassets */,
 				71838DC226220E1800BC90B0 /* LaunchScreen.storyboard */,
 				71838DC526220E1800BC90B0 /* Info.plist */,
 				71838DCD2622101A00BC90B0 /* GoogleService-Info.plist */,
-				71838DEB2622187E00BC90B0 /* Utility.swift */,
 			);
 			path = YourPic;
 			sourceTree = "<group>";
@@ -102,6 +116,7 @@
 			children = (
 				71838DF526222F3D00BC90B0 /* MainViewController.swift */,
 				71838E1D2622984900BC90B0 /* MainViewController+ImagePicker.swift */,
+				71838EAF2622B51500BC90B0 /* MainViewController+CollectionView.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -173,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71838EB52622B58A00BC90B0 /* imageCollectionViewCell.xib in Resources */,
 				71838DC426220E1800BC90B0 /* LaunchScreen.storyboard in Resources */,
 				71838DCE2622101A00BC90B0 /* GoogleService-Info.plist in Resources */,
 				71838DC126220E1800BC90B0 /* Assets.xcassets in Resources */,
@@ -231,10 +247,14 @@
 			files = (
 				71838DEF26221E7300BC90B0 /* CreateAccountViewController.swift in Sources */,
 				71838DEC2622187E00BC90B0 /* Utility.swift in Sources */,
+				71838EB42622B58A00BC90B0 /* imageCollectionViewCell.swift in Sources */,
 				71838DBC26220E1700BC90B0 /* ViewController.swift in Sources */,
+				71838EB02622B51500BC90B0 /* MainViewController+CollectionView.swift in Sources */,
 				71838DF626222F3D00BC90B0 /* MainViewController.swift in Sources */,
 				71838E1E2622984900BC90B0 /* MainViewController+ImagePicker.swift in Sources */,
 				71838DB826220E1700BC90B0 /* AppDelegate.swift in Sources */,
+				71838EBD2622BAD300BC90B0 /* Model.swift in Sources */,
+				71838E582622A51000BC90B0 /* ProfileViewController.swift in Sources */,
 				71838DBA26220E1700BC90B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
