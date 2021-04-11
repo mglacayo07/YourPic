@@ -34,13 +34,26 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let logout = UIAlertAction(title: "Cerrar Sesión", style: UIAlertAction.Style.default) { (action) in
-            do {
-                try Auth.auth().signOut()
-                self.navigationController?.popViewController(animated: true)
-                self.dismiss(animated: true, completion: nil)
-            }catch{
-                
+            
+            let alertController = UIAlertController(title: "Confirmación", message: "Estas apunto de cerrar tu sesión ¿Deseas continuar?", preferredStyle: .alert)
+            
+            let logout = UIAlertAction(title: "Si", style: UIAlertAction.Style.default) { (action) in
+                do {
+                    try Auth.auth().signOut()
+                    self.navigationController?.popViewController(animated: true)
+                    self.dismiss(animated: true, completion: nil)
+                }catch{
+                }
             }
+            
+            let cancel = UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel) { (action) in
+            }
+            
+            alertController.addAction(logout)
+            alertController.addAction(cancel)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
         }
         
         let cancel = UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel) { (action) in
@@ -113,8 +126,8 @@ class MainViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let zoomView = segue.destination as! ZoomViewController
-        zoomView.ref = zoomRef
+        let zoomView = segue.destination as? ZoomViewController
+        zoomView?.ref = zoomRef
         
     }
 }

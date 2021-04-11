@@ -25,6 +25,8 @@
 		71838EB52622B58A00BC90B0 /* imageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71838EB32622B58A00BC90B0 /* imageCollectionViewCell.xib */; };
 		71838EBD2622BAD300BC90B0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838EBC2622BAD300BC90B0 /* Model.swift */; };
 		71838EC12622D6DD00BC90B0 /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838EC02622D6DD00BC90B0 /* ZoomViewController.swift */; };
+		71838F2C2622F34700BC90B0 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838F2B2622F34700BC90B0 /* FavoritesViewController.swift */; };
+		71838F302622F37B00BC90B0 /* FavoritesViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71838F2F2622F37B00BC90B0 /* FavoritesViewController+CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		71838EB32622B58A00BC90B0 /* imageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = imageCollectionViewCell.xib; sourceTree = "<group>"; };
 		71838EBC2622BAD300BC90B0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		71838EC02622D6DD00BC90B0 /* ZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
+		71838F2B2622F34700BC90B0 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		71838F2F2622F37B00BC90B0 /* FavoritesViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesViewController+CollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				71838DB926220E1700BC90B0 /* SceneDelegate.swift */,
 				71838EBC2622BAD300BC90B0 /* Model.swift */,
 				71838E312622993000BC90B0 /* MainViewController */,
+				71838EED2622ECEC00BC90B0 /* FavoritesViewController */,
 				71838DBB26220E1700BC90B0 /* ViewController.swift */,
 				71838DEE26221E7300BC90B0 /* CreateAccountViewController.swift */,
 				71838E572622A51000BC90B0 /* ProfileViewController.swift */,
@@ -122,6 +127,15 @@
 				71838EAF2622B51500BC90B0 /* MainViewController+CollectionView.swift */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		71838EED2622ECEC00BC90B0 /* FavoritesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71838F2B2622F34700BC90B0 /* FavoritesViewController.swift */,
+				71838F2F2622F37B00BC90B0 /* FavoritesViewController+CollectionView.swift */,
+			);
+			path = FavoritesViewController;
 			sourceTree = "<group>";
 		};
 		C4961E5E86DD4FCB58DC5283 /* Frameworks */ = {
@@ -257,8 +271,10 @@
 				71838E1E2622984900BC90B0 /* MainViewController+ImagePicker.swift in Sources */,
 				71838EC12622D6DD00BC90B0 /* ZoomViewController.swift in Sources */,
 				71838DB826220E1700BC90B0 /* AppDelegate.swift in Sources */,
+				71838F302622F37B00BC90B0 /* FavoritesViewController+CollectionView.swift in Sources */,
 				71838EBD2622BAD300BC90B0 /* Model.swift in Sources */,
 				71838E582622A51000BC90B0 /* ProfileViewController.swift in Sources */,
+				71838F2C2622F34700BC90B0 /* FavoritesViewController.swift in Sources */,
 				71838DBA26220E1700BC90B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

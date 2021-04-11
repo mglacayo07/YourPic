@@ -22,24 +22,27 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate{
         super.viewDidLoad()
         userEmail.text = Auth.auth().currentUser?.email
         let storageRef = storage.reference()
-        let listRef = storageRef.child("yourpic/feed/\(Auth.auth().currentUser!.uid)/").listAll { (result, error) in
+        var listRef = storageRef.child("yourpic/feed/\(Auth.auth().currentUser!.uid)/").listAll { (result, error) in
             if let error=error{
                 print("Error \(error)")
             }else{
-                print("Result \(result.items)")
-                print("Result \(result.items.count)")
                 self.picCouter.text = "\(result.items.count)"
             }
         }
-        picCouter.text = "0"
-        starCounter.text = "0"
+        listRef = storageRef.child("yourpic/stars/\(Auth.auth().currentUser!.uid)/").listAll { (result, error) in
+            if let error=error{
+                print("Error \(error)")
+            }else{
+                self.starCounter.text = "\(result.items.count)"
+            }
+        }
         downloadProfileImage()
     }
     
     @IBAction func updateImageProfile(_ sender: Any) {
         openGallery()
     }
-      
+        
     func downloadProfileImage(){
         
         let storageRef = storage.reference()
