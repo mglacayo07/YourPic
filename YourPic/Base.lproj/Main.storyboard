@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,7 +85,7 @@
                     <connections>
                         <outlet property="email" destination="pYF-5w-KLh" id="oDk-d3-3Ps"/>
                         <outlet property="password" destination="ozD-8V-tgL" id="CGS-0N-9Hm"/>
-                        <segue destination="sP7-Vq-QTC" kind="show" identifier="" id="zn1-B6-gVd"/>
+                        <segue destination="sP7-Vq-QTC" kind="show" identifier="createIdentifier" id="zn1-B6-gVd"/>
                         <segue destination="pF3-pK-lKM" kind="show" identifier="mainIdentifier" id="Bfq-YM-Qhb"/>
                     </connections>
                 </viewController>
@@ -92,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="75.669642857142847"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Your Pic-->
         <scene sceneID="P2Y-mt-M0N">
             <objects>
                 <viewController storyboardIdentifier="mainView" id="pF3-pK-lKM" customClass="MainViewController" customModule="YourPic" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,19 +107,48 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="baC-JQ-Dub">
                                 <rect key="frame" x="112.5" y="353.5" width="189.5" height="189.5"/>
                             </imageView>
+                            <toolbar autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="XF1-sT-yzO">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cYO-QB-qj9"/>
+                                    <barButtonItem title="Item" image="heart.circle.fill" catalog="system" id="uZq-If-RXW"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="I9k-aJ-Uma"/>
+                                    <barButtonItem title="Item" id="kPc-gU-se7">
+                                        <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
+                                        <connections>
+                                            <action selector="addImage:" destination="pF3-pK-lKM" id="V6v-lN-Kow"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="g8K-0h-Bil"/>
+                                    <barButtonItem title="Item" image="house.circle.fill" catalog="system" id="oZg-Qz-VQL"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jsr-YP-F0H"/>
+                                </items>
+                                <color key="tintColor" red="0.83202153440000004" green="0.055355854330000002" blue="0.45609056949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iVF-sw-gtT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pFW-Jz-zQJ" firstAttribute="top" secondItem="SI9-Ba-vfA" secondAttribute="top" id="LLu-f9-xDV"/>
+                            <constraint firstItem="XF1-sT-yzO" firstAttribute="trailing" secondItem="iVF-sw-gtT" secondAttribute="trailing" id="RdT-bV-aV9"/>
                             <constraint firstItem="baC-JQ-Dub" firstAttribute="centerX" secondItem="SI9-Ba-vfA" secondAttribute="centerX" id="Tmf-SO-gdO"/>
                             <constraint firstAttribute="bottom" secondItem="pFW-Jz-zQJ" secondAttribute="bottom" id="VOz-Nn-atn"/>
                             <constraint firstItem="pFW-Jz-zQJ" firstAttribute="leading" secondItem="iVF-sw-gtT" secondAttribute="leading" id="aj7-hZ-qWv"/>
                             <constraint firstItem="baC-JQ-Dub" firstAttribute="centerY" secondItem="SI9-Ba-vfA" secondAttribute="centerY" id="fmM-YN-i3i"/>
+                            <constraint firstItem="iVF-sw-gtT" firstAttribute="bottom" secondItem="XF1-sT-yzO" secondAttribute="bottom" id="peZ-0p-xa5"/>
+                            <constraint firstItem="XF1-sT-yzO" firstAttribute="leading" secondItem="iVF-sw-gtT" secondAttribute="leading" id="thv-Cu-wgL"/>
                             <constraint firstItem="pFW-Jz-zQJ" firstAttribute="trailing" secondItem="iVF-sw-gtT" secondAttribute="trailing" id="y4J-w3-R48"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9hU-sq-w5o"/>
+                    <navigationItem key="navigationItem" title="Your Pic" id="L5o-4L-UwN">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" image="gatitos" style="plain" id="HYK-tn-r0N"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="gd1-BK-ZHs">
+                            <color key="tintColor" red="0.83202153440000004" green="0.055355854330000002" blue="0.45609056949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="logout:" destination="pF3-pK-lKM" id="fBV-Jo-7UT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUw-wQ-qgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,8 +285,13 @@
     <resources>
         <image name="Background" width="320" height="568"/>
         <image name="boton gris" width="123" height="29"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="gatitos" width="56" height="35.5"/>
+        <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="house.circle.fill" catalog="system" width="128" height="121"/>
         <image name="logo" width="189.5" height="189.5"/>
         <image name="nuevo" width="189.5" height="189.5"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
