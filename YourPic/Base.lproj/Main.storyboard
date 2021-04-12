@@ -286,7 +286,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HAn-vS-DcA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notfound" translatesAutoresizingMaskIntoConstraints="NO" id="HAn-vS-DcA">
                                 <rect key="frame" x="107" y="138" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="vfP-iq-Xq0"/>
@@ -566,6 +566,7 @@
         <image name="gatitos" width="56" height="35.5"/>
         <image name="house.circle.fill" catalog="system" width="128" height="121"/>
         <image name="logo" width="189.5" height="189.5"/>
+        <image name="notfound" width="166.5" height="125"/>
         <image name="nuevo" width="189.5" height="189.5"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>

@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseUI
 
-class ProfileViewController: UIViewController, UINavigationControllerDelegate{
+class ProfileViewController: Utility, UINavigationControllerDelegate{
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userEmail: UILabel!
@@ -17,9 +17,11 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate{
     @IBOutlet weak var starCounter: UILabel!
     
     let storage = Storage.storage()
+    var profilePicName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("ENTR")
         userEmail.text = Auth.auth().currentUser?.email
         let storageRef = storage.reference()
         var listRef = storageRef.child("yourpic/feed/\(Auth.auth().currentUser!.uid)/").listAll { (result, error) in
@@ -36,7 +38,20 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate{
                 self.starCounter.text = "\(result.items.count)"
             }
         }
-        downloadProfileImage()
+        listRef = storageRef.child("yourpic/profile/\(Auth.auth().currentUser!.uid)/").listAll { (result, error) in
+            if let error=error{
+                print("Error \(error)")
+            }else{
+                if(result.items.count > 0){
+                    self.profilePicName = "\(result.items[0].name)"
+                    print("NAME: \(self.profilePicName)")
+                    self.downloadProfileImage()
+                }else{
+                    self.profilePicName = ""
+                }
+            }
+        }
+        
     }
     
     @IBAction func updateImageProfile(_ sender: Any) {
@@ -44,10 +59,10 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate{
     }
         
     func downloadProfileImage(){
-        
+        print("downloadProfileImage")
         let storageRef = storage.reference()
-        let imageDownloadUrlRef = storageRef.child("yourpic/profile/userProfile.jpeg")
-        
+        let imageDownloadUrlRef = storageRef.child("yourpic/profile/\(Auth.auth().currentUser!.uid)/\(profilePicName)")
+        print(imageDownloadUrlRef)
         profileImage.sd_setImage(with: imageDownloadUrlRef, placeholderImage: UIImage(named: "notfound.png"))
         
         imageDownloadUrlRef.downloadURL { (url, error) in
@@ -61,7 +76,8 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate{
     
     func uploadProfileImage(imageData: Data){
         let storageRef = storage.reference()
-        let imageRef = storageRef.child("yourpic").child("profile").child("userProfile.jpeg")
+        let newName = self.randomString(length: 5)
+        let imageRef = storageRef.child("yourpic").child("profile").child("\(Auth.auth().currentUser!.uid)").child("\(newName).jpeg")
         
         let uploadMetaData = StorageMetadata()
         uploadMetaData.contentType = "image/jpeg"
@@ -72,10 +88,20 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate{
                 print("Error \(error)")
             }else{
                 DispatchQueue.main.async {
-                    self.downloadProfileImage()
+                    //self.profileImage.sd_setImage(with: imageRef, placeholderImage: UIImage(named: "notfound.png"))
+                    self.profileImage.image = UIImage(data: imageData)
                 }
             }
         }
+        
+        if (profilePicName != ""){
+            let startedDownloadUrlRef = storageRef.child("yourpic/profile/\(Auth.auth().currentUser!.uid)/\(profilePicName)")
+            startedDownloadUrlRef.delete { error in
+              if let error = error {
+                print("Error startedDownloadUrlRef \(error)")
+              }
+            }
+        }        
     }
     
     func openGallery(){
