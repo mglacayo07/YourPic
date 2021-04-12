@@ -11,5 +11,6 @@ target 'YourPic' do
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
   pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Database'
 
 end

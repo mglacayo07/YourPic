@@ -15,7 +15,7 @@ class MainViewController: Utility, UINavigationControllerDelegate {
     
     let storage = Storage.storage()
     var images: [StorageReference] = []
-    var idImage: Int = 0
+    var idImage: Int = 0    
     
     var pageIndex: Int = 1
     var zoomRef: [StorageReference] = []
@@ -123,12 +123,10 @@ class MainViewController: Utility, UINavigationControllerDelegate {
             if let error=error{
                 print("Error \(error)")
             }else{
-                print("Image metadata: \(String(describing: metadata))")
                 self.images.append(self.storage.reference(forURL: "\(imageRef)"))
                 self.collectionView.reloadData()
             }
         }
-        
     }
     
     func downloadImages(){

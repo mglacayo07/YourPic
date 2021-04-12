@@ -7,20 +7,12 @@
 
 import UIKit
 
-struct ResultsFlickr: Codable{
-    var stat: String
-    var photos: PhotoArray
+struct MyStars: Codable{
+    var fileName: String
 }
 
-struct PhotoArray: Codable{
-    var photo: [Photo]
-}
-
-struct Photo: Codable{
-    var id: String
-    var owner: String
-    var secret: String
-    var server: String
-    var farm: Int
-    var title: String
+struct Images: Codable{
+    var fileName: String
+    var onwerEmail: String
+    var stars: Int
 }

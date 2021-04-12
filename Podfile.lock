@@ -9,6 +9,9 @@ PODS:
     - FirebaseAnalytics (~> 7.10.0)
   - Firebase/CoreOnly (7.10.0):
     - FirebaseCore (= 7.10.0)
+  - Firebase/Database (7.10.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 7.10.0)
   - Firebase/RemoteConfig (7.10.0):
     - Firebase/CoreOnly
     - FirebaseRemoteConfig (~> 7.10.0)
@@ -40,6 +43,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30908.0)
+  - FirebaseDatabase (7.10.0):
+    - FirebaseCore (~> 7.0)
+    - leveldb-library (~> 1.22)
   - FirebaseInstallations (7.10.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
@@ -87,6 +93,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.3.1):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.5.0)
+  - leveldb-library (1.22.1)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -100,6 +107,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
+  - Firebase/Database
   - Firebase/RemoteConfig
   - Firebase/Storage
   - FirebaseUI/Storage
@@ -112,6 +120,7 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
+    - FirebaseDatabase
     - FirebaseInstallations
     - FirebaseRemoteConfig
     - FirebaseStorage
@@ -120,6 +129,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - leveldb-library
     - nanopb
     - PromisesObjC
     - SDWebImage
@@ -131,6 +141,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: 675f2c4eb4426e7c58a78a89965a6530e7863535
   FirebaseCore: ec566d917b2195fc2610aeb148dae99f57a788f9
   FirebaseCoreDiagnostics: 5662a3823ffcc0acbaa9a21ba5ed302fac634705
+  FirebaseDatabase: ed9c5fc2568e92a22a40cab1ccaf4e0e9e9c8ae6
   FirebaseInstallations: bf2ec8dbf36ff4c91af6b9a003d15855757680c1
   FirebaseRemoteConfig: 2841e353accfe688150781deebeb245e3fe16c2f
   FirebaseStorage: d88ef8e9f152c6a17e44540ae2b93c3be74e9b60
@@ -139,10 +150,11 @@ SPEC CHECKSUMS:
   GoogleDataTransport: cd9db2180fcecd8da1b561aea31e3e56cf834aa7
   GoogleUtilities: e1d9ed4e544fc32a93e00e721400cbc3f377200d
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
 
-PODFILE CHECKSUM: 2411d3e07982d413d6be2d9006bc7a71f16e3f49
+PODFILE CHECKSUM: 35046574bc72953663963b49a03ce14c97b557a4
 
 COCOAPODS: 1.10.1
