@@ -22,10 +22,15 @@ On main view you will find the collection view showing the pics saved on Firebas
 5. Launch app
 6. Sing Up and test
 
-
-# Test User
+### Test User
 
 If you don't change *GoogleService-Info.plist* you could sing up or use this test user.
 
 email: alex@gmail.com<br>
 password: 123456
+
+# Technologies
+
+* Swift
+* Firebase
+* Cocoapods
