@@ -35,3 +35,12 @@ If you don't change *GoogleService-Info.plist* you could sing up or use this tes
 email: alex@gmail.com<br>
 password: 123456
 
+# Preview
+
+![](https://github.com/mglacayo07/images/blob/main/YourPic/0%20logo.png)<br>
+![](https://github.com/mglacayo07/images/blob/main/YourPic/1%20launcher.png)
+![](https://github.com/mglacayo07/images/blob/main/YourPic/2%20login.png)
+![](https://github.com/mglacayo07/images/blob/main/YourPic/4%20upload%20image.png)
+![](https://github.com/mglacayo07/images/blob/main/YourPic/5%20profile.png)
+![](https://github.com/mglacayo07/images/blob/main/YourPic/6%20favorite.png)
+![](https://github.com/mglacayo07/images/blob/main/YourPic/7%20createAccount.png)
