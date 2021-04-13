@@ -4,6 +4,12 @@ This project is made to know how to work with collection views on swift.
 It's integrated with Firebase. You can login or sign up. 
 On main view you will find the collection view showing the pics saved on Firebase Storage. You will be able to add new pics, "star" pics, or delete them.
 
+# Technologies
+
+* Swift
+* Firebase
+* Cocoapods
+
 # Status of the project
 
 :heavy_check_mark:&nbsp;&nbsp;&nbsp;upload images to Firebase<br>
@@ -29,8 +35,3 @@ If you don't change *GoogleService-Info.plist* you could sing up or use this tes
 email: alex@gmail.com<br>
 password: 123456
 
-# Technologies
-
-* Swift
-* Firebase
-* Cocoapods
